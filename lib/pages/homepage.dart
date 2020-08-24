@@ -4,8 +4,11 @@ import '../bloc/navigation_bloc.dart';
 
 
 class HomePage extends StatelessWidget with NavigationStates {
+
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Container(
       color: Color(0xFFE3E3E3),
       child: Stack(
@@ -20,7 +23,7 @@ class HomePage extends StatelessWidget with NavigationStates {
           Container(
             width: 300,
             height: 100,
-            margin: EdgeInsets.only(left: 200.0, top: 370),
+            margin: EdgeInsets.only(left: screenWidth*0.53, top: screenHeight /2),
             decoration: BoxDecoration(
                 image: DecorationImage(
               image: AssetImage("images/hope-logo-retina.png"),
