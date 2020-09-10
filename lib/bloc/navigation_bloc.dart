@@ -5,7 +5,6 @@ import '../pages/gallerypage.dart';
 import '../pages/donatepage.dart';
 import '../pages/settingspage.dart';
 import '../pages/aboutpage.dart';
-import '../pages/q1.dart';
 
 /* 
 Simple enum for all of the different pages in the app.
@@ -16,8 +15,7 @@ enum NavigationEvents {
   GalleryPageClickedEvent,
   DonatePageClickedEvent,
   SettingsPageClickedEvent,
-  AboutPageClickedEvent,
-  Q1PageClickedEvent
+  AboutPageClickedEvent
 }
 
 /*
@@ -59,9 +57,6 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
         break;
       case NavigationEvents.AboutPageClickedEvent:
         yield AboutPage();
-        break;
-      case NavigationEvents.Q1PageClickedEvent:
-        yield Q1Page();
         break;
     }
   }

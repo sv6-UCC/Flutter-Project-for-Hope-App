@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import '../bloc/quiz/quiz_bloc.dart';
 import '../bloc/navigation_bloc.dart';
 import 'sidebar.dart';
-
 
 /*
 
@@ -21,8 +20,11 @@ class SideBarLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider<NavigationBloc>(
-        create: (context) => NavigationBloc(),
+      body: MultiBlocProvider(
+        providers: [
+          BlocProvider<NavigationBloc>(create: (context) => NavigationBloc()),
+          BlocProvider<QuizBloc>(create: (context) => QuizBloc())
+        ],
         child: Stack(
           children: <Widget>[
             BlocBuilder<NavigationBloc, NavigationStates>(

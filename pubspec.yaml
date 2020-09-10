@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
+  fluttericon: ^1.0.7
   cupertino_icons: ^0.1.2
   flutter_bloc: ^2.1.1
 
@@ -47,7 +47,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/
+    - images/home_screen.jpeg
+    - images/hope-logo-retina.png
+    - images/Q1.jpeg
+    - images/Q0.jpeg
+    - images/Q2.jpeg
+    - images/Q3.jpeg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
